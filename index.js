@@ -1,8 +1,9 @@
-let numberOfDrums = document.querySelectorAll(".drum").length;
+let numberOfDrumButtons = document.querySelectorAll(".drum").length;
 
-for (let i = 0; i < numberOfDrums; i++) {
+for (let i = 0; i < numberOfDrumButtons; i++) {
   document.querySelectorAll(".drum")[i].addEventListener("click", function () {
     let buttonInnerHTML = this.innerHTML;
+
     switch (buttonInnerHTML) {
       case "w":
         let audio = new Audio("sounds/tom-1.mp3");
@@ -34,7 +35,8 @@ for (let i = 0; i < numberOfDrums; i++) {
         break;
 
       default:
-        break;
+        console.log(buttonInnerHTML);
+      // break;
     }
     // this.style.color = "blue";
     // let audio = new Audio("sounds/tom-1.mp3");
